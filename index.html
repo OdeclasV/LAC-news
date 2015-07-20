@@ -60,7 +60,7 @@
 
 
         function rssfeedsetup(){
-        var feedpointer=new google.feeds.Feed(feedurl)
+        var feedpointer = new google.feeds.Feed(feedurl)
         feedpointer.setNumEntries(feedlimit) 
         feedpointer.load(displayfeed) 
         };
@@ -68,7 +68,7 @@
 
         function displayfeed(result){
         if (!result.error){
-        var thefeeds=result.feed.entries
+        var thefeeds = result.feed.entries;
         for (var i=0; i<thefeeds.length; i++)
         rssoutput+="<li><a href='" + thefeeds[i].link + "'>" + thefeeds[i].title + "</a></li>"
         rssoutput+="</ul>"
